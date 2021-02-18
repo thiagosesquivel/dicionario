@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 
 const app = express();
 app.use(express.json());
-
+const port = process.env.PORT ||3000
 
 
 app.post('/dicionario', async (req, res)=>{
@@ -36,7 +36,7 @@ app.post('/dicionario', async (req, res)=>{
    
  });
 
- app.listen(3333, ()=>console.log('projeto rodando na porta 3333'))
+ app.listen(port, ()=>console.log('projeto rodando na porta' + port));
 
 
 
